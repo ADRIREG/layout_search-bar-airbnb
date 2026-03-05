@@ -12,23 +12,33 @@
   font-style: normal;
 }
 
+body,
+.search-bar,
+.search-bar__wrapper,
+.search-bar__input,
+.search-bar__button {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0 24px;
   font-family: 'Airbnb Circular', sans-serif;
   font-weight: 300;
   color: #484848;
-  box-sizing: border-box;
 }
 
 .search-bar {
   display: flex;
   width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
 }
 
 .search-bar--big {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.search-bar--small {
   margin-bottom: 20px;
 }
 
@@ -48,7 +58,6 @@ body {
   font-family: inherit;
   font-weight: 300;
   outline: none;
-  box-sizing: border-box;
   transition: all 0.2s ease;
 }
 
@@ -64,16 +73,18 @@ body {
 
 .search-bar__button {
   position: absolute;
+  top: 50%;
   left: 18px;
   width: 18px;
   height: 18px;
   padding: 0;
   border: none;
   background-color: transparent;
-  background-image: url('./images/search.svg');
+  background-image: url('./images/Search.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
